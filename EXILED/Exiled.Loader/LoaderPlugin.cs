@@ -5,6 +5,9 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
+using System.Linq;
+using PluginAPI.Core;
+
 namespace Exiled.Loader
 {
     using System;
@@ -34,7 +37,7 @@ namespace Exiled.Loader
         /// <summary>
         /// Called by PluginAPI when the plugin is enabled.
         /// </summary>
-        [PluginEntryPoint("Exiled Loader", null, "Loads the EXILED Plugin Framework.", "ExMod-Team")]
+        [PluginEntryPoint("Vanced Loader", null, "Loads the Vanced Plugin Framework.", "ExMod-Team & DaybreakLabs")]
         [PluginPriority(byte.MinValue)]
         public void Enable()
         {
@@ -46,15 +49,15 @@ namespace Exiled.Loader
 
             if (!Config.IsEnabled)
             {
-                Log.Info("EXILED is disabled on this server via config.");
+                Log.Info("Vanced is disabled on this server via config.");
                 return;
             }
 
-            Log.Info($"Loading EXILED Version: {Assembly.GetExecutingAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion}");
-
+            Log.Info($"Loading Vanced Version: {Assembly.GetExecutingAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion}");
+            Config.ExiledDirectoryPath = Path.Combine(Config.ExiledDirectoryPath, Server.Port.ToString());
             Paths.Reload(Config.ExiledDirectoryPath);
 
-            Log.Info($"Exiled root path set to: {Paths.Exiled}");
+            Log.Info($"Vanced root path set to: {Paths.Exiled}");
 
             Directory.CreateDirectory(Paths.Exiled);
             Directory.CreateDirectory(Paths.Configs);

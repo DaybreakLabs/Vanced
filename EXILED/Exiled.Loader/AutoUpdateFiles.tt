@@ -4,7 +4,7 @@
 // Licensed under the CC BY-SA 3.0 license.
 // </copyright>
 // -----------------------------------------------------------------------
-<#@ assembly name="$(EXILED_REFERENCES)\Assembly-CSharp-Publicized.dll" #>
+<#@ assembly name="..\..\libraries\Assembly-CSharp-Publicized.dll" #>
 namespace Exiled.Loader
 {
     using System;

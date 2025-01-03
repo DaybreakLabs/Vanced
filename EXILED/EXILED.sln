@@ -13,8 +13,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exiled.Permissions", "Exile
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exiled.API", "Exiled.API\Exiled.API.csproj", "{46A0AFA9-D73A-4131-93EA-0CA7B7A1A101}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exiled.Example", "Exiled.Example\Exiled.Example.csproj", "{4F183633-0A36-408C-A42E-6FBA48751054}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exiled.CustomItems", "Exiled.CustomItems\Exiled.CustomItems.csproj", "{B7FBA3C1-6182-4E96-A33B-053EDDCC4F65}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exiled.CreditTags", "Exiled.CreditTags\Exiled.CreditTags.csproj", "{9FEBCAEA-EB51-46D0-BC04-F74789A40079}"
@@ -56,11 +54,6 @@ Global
 		{46A0AFA9-D73A-4131-93EA-0CA7B7A1A101}.Installer|Any CPU.ActiveCfg = Installer|Any CPU
 		{46A0AFA9-D73A-4131-93EA-0CA7B7A1A101}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46A0AFA9-D73A-4131-93EA-0CA7B7A1A101}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4F183633-0A36-408C-A42E-6FBA48751054}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4F183633-0A36-408C-A42E-6FBA48751054}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4F183633-0A36-408C-A42E-6FBA48751054}.Installer|Any CPU.ActiveCfg = Installer|Any CPU
-		{4F183633-0A36-408C-A42E-6FBA48751054}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4F183633-0A36-408C-A42E-6FBA48751054}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B7FBA3C1-6182-4E96-A33B-053EDDCC4F65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B7FBA3C1-6182-4E96-A33B-053EDDCC4F65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7FBA3C1-6182-4E96-A33B-053EDDCC4F65}.Installer|Any CPU.ActiveCfg = Installer|Any CPU

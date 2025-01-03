@@ -83,10 +83,10 @@ namespace Exiled.Loader
         [Description("Indicates which assemblies should be excluded from the updater.")]
         public string[] ExcludeAssemblies { get; set; } = Array.Empty<string>();
 
-        /// <summary>
+        /*/// <summary>
         /// Gets or sets a value indicating whether Exiled should auto-update itself as soon as a new release is available.
         /// </summary>
         [Description("Indicates whether Exiled should auto-update itself as soon as a new release is available.")]
-        public bool EnableAutoUpdates { get; set; } = true;
+        public bool EnableAutoUpdates { get; set; } = true;*/
     }
 }

@@ -46,7 +46,7 @@ namespace Exiled.Loader
             Log.Warn("You are running a public beta build. It is not compatible with another version of the game.");
 #endif
 
-            Log.SendRaw($"Exiled.API - Version {PluginAPI.Loader.AssemblyLoader.Dependencies.FirstOrDefault(x => x.GetName().Name == "Exiled.API").GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion}", ConsoleColor.DarkRed);
+            Log.SendRaw($"Vanced.API - Version {PluginAPI.Loader.AssemblyLoader.Dependencies.FirstOrDefault(x => x.GetName().Name == "Exiled.API").GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion}", ConsoleColor.DarkRed);
             Log.SendRaw($"{Assembly.GetExecutingAssembly().GetName().Name} - Version {Assembly.GetExecutingAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion}", ConsoleColor.DarkRed);
 
             if (MultiAdminFeatures.MultiAdminUsed)
@@ -366,10 +366,11 @@ namespace Exiled.Loader
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? CheckUAC() : geteuid() == 0)
             {
                 ServerConsole.AddLog("YOU ARE RUNNING THE SERVER AS ROOT / ADMINISTRATOR. THIS IS HIGHLY UNRECOMMENDED. PLEASE INSTALL YOUR SERVER AS A NON-ROOT/ADMIN USER.", ConsoleColor.DarkRed);
-                Thread.Sleep(5000);
+
+                // Thread.Sleep(5000); // I don't think this is necessary
             }
 
-            if (LoaderPlugin.Config.EnableAutoUpdates)
+            /*if (LoaderPlugin.Config.EnableAutoUpdates)
             {
                 Thread thread = new(() =>
                 {
@@ -382,7 +383,7 @@ namespace Exiled.Loader
                 };
 
                 thread.Start();
-            }
+            }*/
 
             if (!LoaderPlugin.Config.ShouldLoadOutdatedExiled &&
                 !GameCore.Version.CompatibilityCheck(
@@ -402,10 +403,10 @@ namespace Exiled.Loader
                     AutoUpdateFiles.RequiredSCPSLVersion.Major,
                     AutoUpdateFiles.RequiredSCPSLVersion.Minor,
                     AutoUpdateFiles.RequiredSCPSLVersion.Revision)
-                            ? "SCP: SL is outdated. Update SCP: SL Dedicated Server to required version or downgrade Exiled."
-                            : "Exiled is outdated, a new version will be installed automatically as soon as it's available.";
+                            ? "SCP: SL is outdated. Update SCP: SL Dedicated Server to required version or downgrade Vanced."
+                            : "Vanced is outdated, a new version will be installed automatically as soon as it's available.";
 
-                ServerConsole.AddLog($"{messageText}\nSCP:SL version: {GameCore.Version.VersionString} Exiled Supported Version: {AutoUpdateFiles.RequiredSCPSLVersion}", ConsoleColor.DarkRed);
+                ServerConsole.AddLog($"{messageText}\nSCP:SL version: {GameCore.Version.VersionString} Vanced Supported Version: {AutoUpdateFiles.RequiredSCPSLVersion}", ConsoleColor.DarkRed);
                 yield break;
             }
 
