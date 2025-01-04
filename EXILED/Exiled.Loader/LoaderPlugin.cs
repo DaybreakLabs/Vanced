@@ -5,17 +5,16 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
-using System.Linq;
-using PluginAPI.Core;
-
 namespace Exiled.Loader
 {
     using System;
     using System.IO;
+    using System.Linq;
     using System.Reflection;
 
     using MEC;
 
+    using PluginAPI.Core;
     using PluginAPI.Core.Attributes;
 
     using Log = API.Features.Log;

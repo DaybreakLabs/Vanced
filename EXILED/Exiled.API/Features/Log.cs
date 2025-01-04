@@ -25,13 +25,13 @@ namespace Exiled.API.Features
         /// Sends a <see cref="Discord.LogLevel.Info"/> level messages to the game console.
         /// </summary>
         /// <param name="message">The message to be sent.</param>
-        public static void Info(object message) => Send($"[{Assembly.GetCallingAssembly().GetName().Name}] {message}", Discord.LogLevel.Info, ConsoleColor.Cyan);
+        public static void Info(object message) => Send($"[{Assembly.GetCallingAssembly().GetName().Name.Replace("Exiled", "Vanced")}] {message}", Discord.LogLevel.Info, ConsoleColor.Cyan);
 
         /// <summary>
         /// Sends a <see cref="Discord.LogLevel.Info"/> level messages to the game console.
         /// </summary>
         /// <param name="message">The message to be sent.</param>
-        public static void Info(string message) => Send($"[{Assembly.GetCallingAssembly().GetName().Name}] {message}", Discord.LogLevel.Info, ConsoleColor.Cyan);
+        public static void Info(string message) => Send($"[{Assembly.GetCallingAssembly().GetName().Name.Replace("Exiled", "Vanced")}] {message}", Discord.LogLevel.Info, ConsoleColor.Cyan);
 
         /// <summary>
         /// Sends a <see cref="Discord.LogLevel.Debug"/> level messages to the game console.

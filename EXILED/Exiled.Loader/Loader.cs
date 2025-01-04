@@ -47,7 +47,7 @@ namespace Exiled.Loader
 #endif
 
             Log.SendRaw($"Vanced.API - Version {PluginAPI.Loader.AssemblyLoader.Dependencies.FirstOrDefault(x => x.GetName().Name == "Exiled.API").GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion}", ConsoleColor.DarkRed);
-            Log.SendRaw($"{Assembly.GetExecutingAssembly().GetName().Name} - Version {Assembly.GetExecutingAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion}", ConsoleColor.DarkRed);
+            Log.SendRaw($"Vanced.Loader - Version {Assembly.GetExecutingAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion}", ConsoleColor.DarkRed);
 
             if (MultiAdminFeatures.MultiAdminUsed)
             {
@@ -421,11 +421,12 @@ namespace Exiled.Loader
 
             EnablePlugins();
 
+            /*
             BuildInfoCommand.ModDescription = string.Join(
                 "\n",
                 AppDomain.CurrentDomain.GetAssemblies()
                     .Where(a => a.FullName.StartsWith("Exiled.", StringComparison.OrdinalIgnoreCase))
-                    .Select(a => $"{a.GetName().Name} - Version {a.GetName().Version.ToString(3)}"));
+                    .Select(a => $"{a.GetName().Name} - Version {a.GetName().Version.ToString(3)}"));*/
 
             ServerConsole.AddLog($"Welcome to {LoaderMessages.GetMessage()}", ConsoleColor.Green);
         }
